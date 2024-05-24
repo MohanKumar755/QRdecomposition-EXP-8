@@ -23,24 +23,25 @@ To implement QR decomposition algorithm using the Gram-Schmidt method.
 
 ## Program:
 ```
-def QR_Decomposition(A):
-n, m = A.shape # get the shape of A
-Q= np.empty((n, n)) # initialize matrix Q
-u = np.empty((n, n)) # initialize matrix u
-u[:, 0] = A[:, 0]
-Q[:, 0] = u[:, 0] / np.linalg.norm(u[:, 0])
-for i in range(1, n):
-u[:, i] = A[:, i]
-for j in range(i):
-u[:, i] -= (A[:, i] @ Q[:, j]) * Q[:, j] # get each u vector
-Q[:, i] = u[:, i] / np.linalg.norm(u[:, i]) # compute each e vetor
-R = np.zeros((n, m))
-for i in range(n):
-for j in range(i, m):
-R[i, j] = A[:, j] @ Q[:, i]
-print(Q)
-print(R)
-a = np.array(eval(input()))
+def QR Decomposition(A):
+    n, m A. shape # get the shape of A 
+    Q= np.empty((n, n)) # initialize matrix Q 
+    u-np.empty((n, n)) # initialize matrix u
+    u[:, 0] = A[:, 0]
+    Q[:, ]u[:, 8] / np.linalg.norm(u[:, 0])
+QRdecomposition/README.md at main D
+    for i in range(1, n): 
+        u[:, i] = A[:, 1]
+    for j in range(i):
+        u[:, 1] -=(A[:, 1] @ Q[:, j]) Q[:, j] # get each u vector
+    Q[:, i]=u[:, i] / np.linalg.norm(u[:, i]) # compute each e vetor
+    R=np.zeros((n, m))
+    for i in range(n):
+        for j in range(i, m):
+            R[i, j]= A[:, j] @ Q[:, i]
+            print(Q)
+            print(R)
+a =np.array(eval(input()))
 QR_Decomposition(a)
 
 ```
@@ -53,20 +54,12 @@ QR_Decomposition(a)
 
 [ 0.70710678 -0.40824829 0.57735027]
 
-0.81649658 0.57735027]]
+[0             0.81649658 0.57735027]]
 
 [[1.41421356 0.70710678 0.70710678]
 
-[0.
+[0.           1.22474487 0.40824829]
 
-[0.
-
-[0.
-
-1.22474487 0.40824829]
-
-0.
-
-1.15470054]]
+[0.      0        1.15470054]]
 ## Result
 Thus the QR decomposition algorithm using the Gram-Schmidt process is written and verified the result.
